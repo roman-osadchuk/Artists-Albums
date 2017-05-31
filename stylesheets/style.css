@@ -1,0 +1,135 @@
+.navbar-right{
+    margin-right: 50px;
+}
+
+.back_button{
+    margin-bottom: 20px;
+}
+
+.glyphicon-hand-left{
+    position: relative;
+    padding-right: 60px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.glyphicon-hand-left > span{
+    position: absolute;
+    top: 4px;
+    left: 40px;
+}
+
+.glyphicon-hand-left:hover{
+    opacity: 0.6;
+}
+
+.panel-heading > span{
+    display: block;
+    font-size: 20px;
+}
+
+.panel-heading > span:first-letter{
+    text-transform: uppercase;
+}
+
+.pull-right{
+    margin-top: 65px;
+}
+
+.album_header:first-letter{
+    text-transform: uppercase;
+}
+
+.sign-up{
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+}
+
+.sign-up:after{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 120px;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid gray;
+}
+
+.sign-up:hover{
+    cursor: pointer;
+}
+
+.sign-down:after{
+    top: 5px;
+    border-top: 8px solid gray;
+    border-bottom: 8px solid transparent;
+}
+
+.lorem_text > span{
+    margin-top: 20px;
+}
+
+.lorem_text > span{
+    display: none;
+    margin: 0px 20px;
+    text-align: center;
+}
+
+#feedback_form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 20px;
+    border: 3px solid #839;
+    border-radius: 4px;
+}
+
+#reviewForm > div{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+#reviewForm > div > select{
+    width: 40%;
+    padding: 5px;
+}
+
+#reviewForm > div > input[type=text]{
+    width: 60%;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#reviewForm > textarea{
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+    resize: none;
+    padding: 5px;
+}
+
+#submit_button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#pagination{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: #333;
+    color: #ddd;
+    height: 40px;
+    padding-top: 10px;
+    margin-top: 30px;
+    text-align: center;
+}

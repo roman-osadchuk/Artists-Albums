@@ -1,0 +1,16 @@
+<div ng-controller="ArtistsCtrl">
+   
+    <div ng-repeat="artist in artists.data | startFrom : (currentPage - 1) * pageSize | limitTo : pageSize">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <span>{{artist.title}}</span>
+            </div>
+            <div class="panel-body">
+                <a href="#!/artists/{{artist.id}}">Show Albums</a>
+            </div>
+        </div>
+    </div>
+    
+    <ul uib-pagination id="pagination" total-items="artists.data.length" ng-model="currentPage" items-per-page="pageSize" boundary-link-numbers="true" max-size="5"></ul>
+    
+</div>

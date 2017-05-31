@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ArtistsAlbums" ng-cloak>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Artists Albums</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+  </head>
+
+  <body ng-controller="mainCtrl">
+
+       <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-inverse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#!/artists" ng-click="setSwitcher(2)">List of Artists</a></li>
+                        <li><a href="#!/findArtist" ng-click="setSwitcher(1)">All Artists</a></li>
+                    </ul>
+                    
+                    <form class="navbar-form navbar-right" ng-show="switcher == 1">
+                      <div class="form-group">
+                        <input type="text" name="search" placeholder="find the artist..." class="form-control" ng-model="findArtist"/>
+                      </div>
+                    </form>
+                </nav>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" ng-view></div>
+            </div>
+           
+            <div class="row">
+                <footer>
+                    <div>This app was created by Roman Osadchuk</div>
+                </footer>
+            </div>
+       </div>
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="ui-bootstrap-tpls-2.5.0.min.js"></script>
+    
+    <script src="javascripts/app.js"></script>
+    <script src="javascripts/controllers/controllers.js"></script>
+    <script src="javascripts/directives/directives.js"></script>
+    <script src="javascripts/servises/servises.js"></script>
+    <script src="javascripts/filters/filters.js"></script>
+    
+  </body>
+</html>

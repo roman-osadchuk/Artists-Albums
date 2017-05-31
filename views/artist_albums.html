@@ -1,0 +1,23 @@
+<div ng-controller="ArtistsAlbumsCtrl">
+   
+    <div class="back_button">
+        <a href="#!/artists" ng-click="setSwitcher(2)" class="btn btn-primary glyphicon glyphicon-hand-left">
+            <span>Back</span>
+        </a>
+    </div>
+    
+    <div ng-repeat="artist in artistsAlbums.data | startFrom : (currentPage - 1) * pageSize | limitTo : pageSize">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <span>{{artist.title}}</span>
+            </div>
+            <div class="panel-body">
+                <img ng-src="{{artist.thumbnailUrl}}" class="img-thumbnail img-responsive" alt="img">
+                <a href="#!/artistAlbum/{{artist.id}}" class="pull-right">Album Details</a>
+            </div>
+        </div>
+    </div>
+    
+    <ul uib-pagination id="pagination" total-items="artistsAlbums.data.length" ng-model="currentPage" items-per-page="pageSize" boundary-link-numbers="true" max-size="5"></ul>
+    
+</div>

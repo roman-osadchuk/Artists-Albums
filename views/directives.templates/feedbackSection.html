@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="rating" ng-controller="ReviewController">
+
+        <div id="feedback_form">
+
+            <form id="reviewForm" name="reviewForm" ng-submit="addReview(feedback)" novalidate>
+                <div>
+                    <select ng-model="feedback.stars">
+                        <option value="">Rate the Album</option>
+                        <option value="1">1 star</option>
+                        <option value="2">2 stars</option>
+                        <option value="3">3 stars</option>
+                        <option value="4">4 stars</option>
+                        <option value="5">5 stars</option>
+                    </select>
+                    <input type="text" name="email" placeholder="Write your e-mail" ng-model="feedback.email"/>
+                </div>
+
+                <textarea placeholder="Write a short review on a album..."  ng-model="feedback.body"></textarea>
+                <div id="submit_button">
+                    <input type="submit" class="btn btn-primary" value="Submit Review" />
+                </div>
+            </form>
+        </div>
+
+        <hr>
+
+        <div class="col-md-4">
+            <blockquote class="review-item" ng-repeat="review in reviews">
+                <b>Stars: {{review.stars}}</b><br>
+                {{review.email}}<br>
+                {{review.body}}
+            </blockquote>
+        </div>
+
+    </div>
+</div>

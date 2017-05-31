@@ -1,0 +1,22 @@
+<div ng-controller="ArtistAlbumCtrl">
+   
+    <div class="back_button">
+        <a href="#!/artists/{{artistAlbumPhoto.data.albumId}}" class="btn btn-primary glyphicon glyphicon-hand-left">
+            <span>Back</span>
+        </a>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6" align="center">
+            <img ng-src="{{artistAlbumPhoto.data.url}}" class="img-thumbnail img-responsive" alt="bigImg" />
+        </div>
+        <div class="col-md-6" align="center">
+            <h1 class="album_header">{{artistAlbumPhoto.data.title}}</h1>
+        </div>
+    </div>
+    
+    <album-description></album-description>
+    
+    <feedback-section></feedback-section>
+    
+</div>
